@@ -66,7 +66,7 @@ async function initDB(db: AsyncDuckDB, progress?: ProgressFn) {
     protocol: _protocol,
   } = window.location;
   // const url = `${protocol}//${hostname}:${port}/sb.duckdb.wasm`;
-  const url = `https://static.radar.iodev.org/sb.duckdb?cb=${Math.random()}*100}`;
+  const url = `https://pub-61e4303ece054a23b50baa432ce22cfc.r2.dev/sb.duckdb?cb=${Math.random() * 100}`;
   const res = await fetchWithProgress(url, progress);
   const buffer = await res.arrayBuffer();
   await db.registerFileBuffer("sb.duckdb", new Uint8Array(buffer));
