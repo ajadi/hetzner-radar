@@ -26,8 +26,8 @@ HETZNER_LIVE_API_URL = "https://www.hetzner.com/_resources/app/data/app/live_dat
 
 # Minimum expected records to prevent uploading a corrupted/empty database
 # This should be set to a reasonable minimum based on typical data volume
-MIN_AUCTION_RECORDS = 50000  # ~50k auction records expected for 90 days
-MIN_DAYS_OF_DATA = 30  # At least 30 days of data expected
+MIN_AUCTION_RECORDS = 500  # minimum viable for self-hosted instance
+MIN_DAYS_OF_DATA = 1  # at least 1 day of data expected
 
 # Schema for the server table (new columns at end for backwards compat)
 create_table_query = """
